@@ -1,0 +1,4 @@
+repo_source: https://github.com/iphilka/stud-template
+repo_dest: /home/ansible-worker/www
+nginx_available: /etc/nginx/sites-available
+nginx_enabled: /etc/nginx/sites-enabled

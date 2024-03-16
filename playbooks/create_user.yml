@@ -1,0 +1,4 @@
+- name: create a user
+  ansible.builtin.user:
+    name: ansible-worker
+    group: 'www-data'

@@ -1,0 +1,9 @@
+- name: clone the git repository
+  ansible.builtin.git:
+    repo: "{{ repo_source }}"
+    dest: "{{ repo_dest }}"
+
+- name: replace the index.html file
+  ansible.builtin.copy:
+    src: ../index.html
+    dest: "{{ repo_dest }}/index.html"

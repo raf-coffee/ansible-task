@@ -1,0 +1,25 @@
+- hosts: webserver
+  become: true
+  
+  tasks:
+    - name: create a user
+      import_tasks: create_user.yml
+
+    - name: copy an ssh key
+      import_tasks: copy_ssh.yml
+
+    - name: install a list of packages
+      import_tasks: install_packages.yml
+    
+    - name: clone the git repo
+      import_tasks: git_clone.yml
+
+    - name: configure nginx
+      import_tasks: nginx_configuration.yml
+    
+    - name: restart nginx
+      ansible.builtin.service:
+        name: nginx
+        state: restarted
+
+

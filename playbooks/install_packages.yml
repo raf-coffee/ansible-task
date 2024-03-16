@@ -1,0 +1,9 @@
+- name: update apt
+  ansible.builtin.apt:
+    update_cache: yes
+
+- name: install packages
+  ansible.builtin.apt:
+    pkg: 
+      - git
+      - nginx
