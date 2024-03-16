@@ -16,3 +16,8 @@
   ansible.builtin.file:
     path: "{{ nginx_enabled }}/default"
     state: absent
+    
+- name: restart nginx
+  ansible.builtin.service:
+    name: nginx
+    state: restarted

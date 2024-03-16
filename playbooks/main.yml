@@ -16,10 +16,5 @@
 
     - name: configure nginx
       import_tasks: nginx_configuration.yml
-    
-    - name: restart nginx
-      ansible.builtin.service:
-        name: nginx
-        state: restarted
 
 
